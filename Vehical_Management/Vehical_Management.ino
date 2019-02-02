@@ -3,6 +3,7 @@
 int const trigPin = 10;
 int const echoPin = 9;
 int const led = 2;
+int const led2 = 4;
 long count=0;
 long tk=0;
 
@@ -24,6 +25,10 @@ void loop()
   digitalWrite(trigPin, HIGH); 
   delay(1);
   digitalWrite(trigPin, LOW);
+
+  if(tk>10)
+    digitalWrite(led2, HIGH);
+  
   // Measure the pulse input in echo pin
   duration = pulseIn(echoPin, HIGH);
   // Distance is half the duration devided by 29.1 (from datasheet)

@@ -3,7 +3,7 @@
 int const trigPin = 10;
 int const echoPin = 9;
 int const led = 2;
-int const led2 = 4;
+int const counter_led = 4;
 long count=0;
 long tk=0;
 
@@ -27,7 +27,7 @@ void loop()
   digitalWrite(trigPin, LOW);
 
   if(tk>10)
-    digitalWrite(led2, HIGH);
+    digitalWrite(counter_led, HIGH);
   
   // Measure the pulse input in echo pin
   duration = pulseIn(echoPin, HIGH);
